@@ -6,6 +6,11 @@ This is in service of Navigation 2 Learning experience and fulfills the demonstr
 * Navigation 2 framework
 * Behavior Trees (C++)
 
+Additionally, for first time ROS 2 developers, this repository also demonstrates the following -
+* ROS 2 python package usage
+* ROS 2 C++ package usage
+* ROS 2 launch infrastructure
+
 Note - Add visual demo and pre-req tools/packages
 To reproduce the above result, follow the steps below -
 
