@@ -9,7 +9,7 @@ This is in service of Navigation 2 Learning experience and fulfills the demonstr
 Note - Add visual demo and pre-req tools/packages
 To reproduce the above result, follow the steps below -
 
-1. Clone this repository in a new ros2 workspace in src directory (`ros2_ws/src`) 
+1. Clone this repository in a new ros2 workspace in src directory (`turtlebot3_ws/src`) 
 2. Import TurtleBot3 packages with vcs - `vcs import . < turtlebot3.repos`
 3. Build all packages `colcon build --symlink-install`
 4. Source the workspace `source ./install/setup.bash`
