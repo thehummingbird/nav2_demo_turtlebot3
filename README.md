@@ -15,6 +15,9 @@ Note - Add visual demo and pre-req tools/packages
 To reproduce the above result, follow the steps below -
 
 1. Clone this repository in a new ros2 workspace in src directory (`turtlebot3_ws/src`) 
+```
+git clone git@github.com:thehummingbird/nav2_demo_turtlebot3.git .
+```
 2. Import TurtleBot3 packages with vcs 
 ```
 vcs import . < turtlebot3.repos
