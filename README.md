@@ -1,5 +1,7 @@
 # Navigation 2 demo in ROS2 using TurtleBot3
 
+![nav2_screenshot](./images/nav2_screenshot.png)
+
 This repository demonstrates the usage of Navigation 2 framework in ROS 2 using TurtleBot3 Gazebo simulation
 
 This is in service of Navigation 2 Learning experience and fulfills the demonstration of the following -
