@@ -58,6 +58,6 @@ ros2 launch tb3_sim nav2.launch.py
 ros2 launch tb3_autonomy autonomy.launch.py
 ```
 
-This starts our demonstration where turtlebot moves between 4 different locations in the world simulation
+This starts our demonstration where turtlebot moves between 4 different locations in the world simulation (set in `tb3_sim/config/sim_house_locations.yaml`)
 
 
