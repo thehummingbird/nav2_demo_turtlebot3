@@ -1,4 +1,4 @@
-image: /home/sharad/ros2_simulations2/turtlebot3_ws/map/map2.pgm
+image: map.pgm
 mode: trinary
 resolution: 0.05
 origin: [-2.96, -2.6, 0]
