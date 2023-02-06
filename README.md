@@ -26,7 +26,7 @@ git clone git@github.com:thehummingbird/nav2_demo_turtlebot3.git .
 ```
 vcs import . < turtlebot3.repos
 ```
-3. Build all packages 
+3. Build all packages from workspace directory (`turtlebot3_ws`)
 ```
 colcon build --symlink-install
 ```
