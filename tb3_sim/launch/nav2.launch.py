@@ -34,7 +34,7 @@ def generate_launch_description():
   use_sim_time = LaunchConfiguration('use_sim_time', default='True')
   autostart = LaunchConfiguration('autostart', default='True')
 
-  spawn_turtlebot_cmd = IncludeLaunchDescription(
+  nav2_launch_cmd = IncludeLaunchDescription(
       PythonLaunchDescriptionSource(
           os.path.join(pkg_nav2_dir, 'launch', 'bringup_launch.py')
       ),
@@ -57,8 +57,6 @@ def generate_launch_description():
           )]
   )
 
-  # sleep(5)
-
   set_init_amcl_pose_cmd = Node(
       package="tb3_sim",
       executable="amcl_init_pose_publisher",
@@ -72,7 +70,7 @@ def generate_launch_description():
   ld = LaunchDescription()
 
   # Add the commands to the launch description
-  ld.add_action(spawn_turtlebot_cmd)
+  ld.add_action(nav2_launch_cmd)
   ld.add_action(set_init_amcl_pose_cmd)
   ld.add_action(rviz_launch_cmd)
 
