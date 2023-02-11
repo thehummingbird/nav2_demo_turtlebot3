@@ -30,6 +30,8 @@ vcs import . < turtlebot3.repos
 3. Build all packages from workspace directory (`turtlebot3_ws`)
 ```
 colcon build --symlink-install
+
+Ignore sterr output (that's a warning)
 ```
 4. Source the workspace
 ```
@@ -52,15 +54,17 @@ ros2 launch tb3_sim turtlebot3_world.launch.py
 7. Launch nav2 infrastructure (nav2 + amcl initial pose)
 
 ```
+source ./install/setup.bash
 ros2 launch tb3_sim nav2.launch.py
 ```
 
 8. Launch autonomy behavior for demo
 
 ```
+source ./install/setup.bash
 ros2 launch tb3_autonomy autonomy.launch.py
 ```
 
-This starts our demonstration where turtlebot moves between 4 different locations in the world simulation (set in `tb3_sim/config/sim_house_locations.yaml`)
+This starts our demonstration where TurtleBot moves between 4 different locations in the world simulation (set in `tb3_sim/config/sim_house_locations.yaml`)
 
 

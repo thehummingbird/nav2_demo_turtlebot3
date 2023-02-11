@@ -16,12 +16,6 @@ setup(
          glob('launch/*launch.[pxy][yma]*')),
         (os.path.join('share', package_name, 'config/'),
          glob('config/*')),
-        (os.path.join('share', package_name, 'models/green_block/'),
-         glob('models/green_block/*')),
-        (os.path.join('share', package_name, 'models/blue_block/'),
-         glob('models/blue_block/*')),
-        (os.path.join('share', package_name, 'models/red_block/'),
-         glob('models/red_block/*')),
         (os.path.join('share', package_name, 'maps/'),
          glob('maps/*')),
     ],
@@ -34,7 +28,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'block_spawner = tb3_sim.block_spawner:main',
             'amcl_init_pose_publisher = tb3_sim.set_init_amcl_pose:main',
         ],
     },

@@ -71,26 +71,11 @@ def generate_launch_description():
       }.items()
   )
 
-#   block_spawn_cmd = IncludeLaunchDescription(
-#       PythonLaunchDescriptionSource(
-#           os.path.join(pkg_tb3_sim, 'block_spawn.launch.py')
-#       )
-#   )
-
-#   nav2_run_cmd = IncludeLaunchDescription(
-#       PythonLaunchDescriptionSource(
-#           os.path.join(pkg_tb3_sim, 'nav2.launch.py')
-#       )
-#   )
-
   ld = LaunchDescription()
 
-  # Add the commands to the launch description
   ld.add_action(gzserver_cmd)
   ld.add_action(gzclient_cmd)
   ld.add_action(robot_state_publisher_cmd)
   ld.add_action(spawn_turtlebot_cmd)
-  # ld.add_action(block_spawn_cmd)
-  # ld.add_action(nav2_run_cmd)
 
   return ld
