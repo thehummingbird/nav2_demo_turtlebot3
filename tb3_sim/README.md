@@ -5,5 +5,5 @@ This package has the following
   - set initial amcl pose of the robot
 - launch files to 
   - launch TurtleBot3 in a gazebo world
-  - launch Navigation 2 with all requirements, initialise amcl pose  and rviz visualisation
+  - launch nav2 node with all requirements, initialise amcl pose  and rviz visualisation
 - infrastructure files in config, map
