@@ -31,7 +31,7 @@ void AutonomyNode::create_behavior_tree()
 {
   BT::BehaviorTreeFactory factory;
 
-  //register bt node
+  // register bt node
 
   BT::NodeBuilder builder =
       [=](const std::string &name, const BT::NodeConfiguration &config)
@@ -41,7 +41,6 @@ void AutonomyNode::create_behavior_tree()
 
   factory.registerBuilder<GoToPose>("GoToPose", builder);
 
-  //factory.registerNodeType<GoToPose>("GoToPose", shared_from_this());
   RCLCPP_INFO(get_logger(), bt_xml_dir.c_str());
 
   tree_ = factory.createTreeFromFile(bt_xml_dir + "/tree.xml");
@@ -59,7 +58,6 @@ void AutonomyNode::update_behavior_tree()
   else if (tree_status == BT::NodeStatus::SUCCESS)
   {
     RCLCPP_INFO(this->get_logger(), "Finished Navigation");
-    //timer_->cancel();
   }
   else if (tree_status == BT::NodeStatus::FAILURE)
   {

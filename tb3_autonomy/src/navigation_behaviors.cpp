@@ -18,7 +18,7 @@ BT::PortsList GoToPose::providedPorts()
 
 BT::NodeStatus GoToPose::onStart()
 {
-  //Get loction key from port and read YAML file
+  // Get location key from port and read YAML file
   BT::Optional<std::string> loc = getInput<std::string>("loc");
   const std::string location_file = node_ptr_->get_parameter("location_file").as_string();
 
@@ -26,11 +26,11 @@ BT::NodeStatus GoToPose::onStart()
 
   std::vector<float> pose = locations[loc.value()].as<std::vector<float>>();
 
-  //setup action client
+  // setup action client
   auto send_goal_options = rclcpp_action::Client<NavigateToPose>::SendGoalOptions();
   send_goal_options.result_callback = std::bind(&GoToPose::nav_to_pose_callback, this, std::placeholders::_1);
 
-  //package pose
+  // make pose
   auto goal_msg = NavigateToPose::Goal();
   goal_msg.pose.header.frame_id = "map";
   goal_msg.pose.pose.position.x = pose[0];
@@ -38,10 +38,10 @@ BT::NodeStatus GoToPose::onStart()
 
   tf2::Quaternion q;
   q.setRPY(0, 0, pose[2]);
-  q.normalize(); //todo: why?
+  q.normalize(); // todo: why?
   goal_msg.pose.pose.orientation = tf2::toMsg(q);
 
-  //send pose
+  // send pose
   done_flag_ = false;
   action_client_ptr_->async_send_goal(goal_msg, send_goal_options);
   RCLCPP_INFO(node_ptr_->get_logger(), "Sent Goal to Nav2\n");
@@ -64,7 +64,7 @@ BT::NodeStatus GoToPose::onRunning()
 void GoToPose::nav_to_pose_callback(const GoalHandleNav::WrappedResult &result)
 {
   // If there is a result, we consider navigation completed.
-  // bt_navigator only sends an empty message without status because reasons.
+  // bt_navigator only sends an empty message without status. Idk why though.
 
   if (result.result)
   {

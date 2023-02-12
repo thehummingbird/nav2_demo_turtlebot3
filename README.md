@@ -4,7 +4,7 @@
 
 This repository demonstrates the usage of Navigation 2 framework in ROS 2 using TurtleBot3 Gazebo simulation.
 
-It is inspired by the works of Davide Faconti's [BehaviorTree.CPP](https://www.behaviortree.dev/) and Sebastian Castro's [Navigation 2 demo](https://github.com/sea-bass/turtlebot3_behavior_demos). I reverse engineered and stripped down navigation 2 demo further for first time developers. I hope this serves as a great base for you to start working with Navigation 2 in ROS 2.
+It is inspired by the works of Davide Faconti's [BehaviorTree.CPP](https://www.behaviortree.dev/) and Sebastian Castro's [Navigation 2 demo](https://github.com/sea-bass/turtlebot3_behavior_demos). In fact, I learned quite a bit from Sebastian's repository. So you can also look at his work to learn, as this repo has a lot in common with it. I reverse engineered and stripped down navigation 2 demo further for first time developers. I hope this serves as a great base for you to start working with Navigation 2 in ROS 2.
 
 The repository is in service of Navigation 2 Learning experience and fulfills the demonstration of the following -
 * Navigation 2 framework

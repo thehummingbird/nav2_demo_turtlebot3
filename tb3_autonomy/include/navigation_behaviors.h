@@ -20,13 +20,13 @@ public:
   rclcpp_action::Client<NavigateToPose>::SharedPtr action_client_ptr_;
   bool done_flag_;
 
-  //Method overrides
+  // Method overrides
   BT::NodeStatus onStart() override;
   BT::NodeStatus onRunning() override;
   void onHalted() override{};
 
   static BT::PortsList providedPorts();
 
-  //Action CLient callback
+  // Action Client callback
   void nav_to_pose_callback(const GoalHandleNav::WrappedResult &result);
 };

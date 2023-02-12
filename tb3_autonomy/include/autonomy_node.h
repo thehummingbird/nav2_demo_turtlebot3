@@ -9,7 +9,6 @@ class AutonomyNode : public rclcpp::Node
 {
 public:
   explicit AutonomyNode(const std::string &node_name);
-  //execute will be in constructor clling setup
   void setup();
   void create_behavior_tree();
   void update_behavior_tree();
