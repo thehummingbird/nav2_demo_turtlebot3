@@ -7,7 +7,7 @@ const std::string bt_xml_dir =
 
 AutonomyNode::AutonomyNode(const std::string &nodeName) : Node(nodeName)
 {
-  this->declare_parameter("location_file");
+  this->declare_parameter("location_file","none");
 
   RCLCPP_INFO(get_logger(), "Init done");
 }
@@ -74,3 +74,4 @@ int main(int argc, char **argv)
 
   return 0;
 }
+

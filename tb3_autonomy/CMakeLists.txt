@@ -13,6 +13,8 @@ find_package(rclcpp_action REQUIRED)
 find_package(nav2_msgs REQUIRED)
 find_package(behaviortree_cpp_v3 REQUIRED)
 find_package(yaml-cpp REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -36,6 +38,8 @@ set(TARGET_DEPENDS
     yaml-cpp
     rclcpp_action
     nav2_msgs
+    tf2
+    tf2_geometry_msgs
 )
 
 include_directories(include)
