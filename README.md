@@ -1,4 +1,4 @@
-# Navigation 2 demo in ROS2 using TurtleBot3
+# Navigation 2 demo in ROS2 using TurtleBot3 (Humble)
 
 ![nav2_screenshot](./images/nav2_screenshot.png)
 
