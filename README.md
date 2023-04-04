@@ -15,7 +15,7 @@ Additionally, for first time ROS 2 developers, this repository also demonstrates
 * ROS 2 C++ package usage
 * ROS 2 launch infrastructure
 
-You need ROS 2 (current main branch uses galactic, update for humble coming soon) and TurtleBot3 simulation woking on Gazebo. You're good to go if you can follow [this](https://medium.com/@thehummingbird/ros-2-mobile-robotics-series-part-1-8b9d1b74216) TurtleBot 3 ROS 2 tutorial successfully.
+You need ROS 2 (current main branch uses humble, galactic is in another branch) and TurtleBot3 simulation woking on Gazebo. You're good to go if you can follow [this](https://medium.com/@thehummingbird/ros-2-mobile-robotics-series-part-1-8b9d1b74216) TurtleBot 3 ROS 2 tutorial successfully.
 
 To reproduce the above result, follow the steps below -
 
